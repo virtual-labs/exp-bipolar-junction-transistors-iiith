@@ -2,38 +2,157 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. In a BJT, which terminals control the flow of current between the other two terminals?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Emitter controls collector and base",
+        "b": "Base controls current between collector and emitter",
+        "c": "Collector controls emitter current",
+        "d": "All three equally control current"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. The emitter provides carriers but does not control the current.",
+        "b": "Correct. In a BJT, the base terminal modulates the current between the collector and emitter.",
+        "c": "Incorrect. The collector just collects carriers; it does not control current flow.",
+        "d": "Incorrect. The base has the dominant control role."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. Which statement about an NPN BJT is correct?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The collector is always negatively doped.",
+        "b": "The base is thin and lightly doped compared to emitter and collector.",
+        "c": "The emitter is lightly doped to allow easy carrier diffusion.",
+        "d": "Base-collector junction is always forward-biased."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Collector doping depends on the device type.",
+        "b": "Correct. The base is thin and lightly doped to allow efficient carrier injection.",
+        "c": "Incorrect. The emitter is heavily doped for strong carrier injection.",
+        "d": "Incorrect. In normal active mode, the base-collector junction is reverse-biased."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What is the approximate typical range of DC current gain (β) for BJTs used in small-signal amplifiers?",
+      "answers": {
+        "a": "1 - 5",
+        "b": "5 - 20",
+        "c": "20 - 300",
+        "d": "300 - 2000"
+      },
+      "explanations": {
+        "a": "Incorrect. This is too low for most BJTs.",
+        "b": "Incorrect. Some power BJTs may have β in this range but not small-signal ones.",
+        "c": "Correct. Small-signal BJTs typically have β values between 20 and 300.",
+        "d": "Incorrect. Such high β values are rare and occur in special devices."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following describes the forward-active region in a BJT?",
+      "answers": {
+        "a": "Both junctions reverse-biased",
+        "b": "Emitter-base forward-biased, collector-base reverse-biased",
+        "c": "Both junctions forward-biased",
+        "d": "Emitter-base reverse-biased, collector-base forward-biased"
+      },
+      "explanations": {
+        "a": "Incorrect. That represents the cutoff region.",
+        "b": "Correct. Forward-active mode requires VBE forward-biased and VBC reverse-biased for amplification.",
+        "c": "Incorrect. Both junctions forward-biased indicate saturation mode.",
+        "d": "Incorrect. That corresponds to reverse-active mode."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. If β = 100 and base current I<sub>B</sub> = 20 μA in the forward-active region, what is the collector current I<sub>C</sub>?",
+      "answers": {
+        "a": "0.2 mA",
+        "b": "2.0 mA",
+        "c": "200 mA",
+        "d": "20 mA"
+      },
+      "explanations": {
+        "a": "Incorrect. Check the formula I_C = β × I_B.",
+        "b": "Correct. I_C = β × I_B = 100 × 20 μA = 2.0 mA.",
+        "c": "Incorrect. That's too high; it assumes incorrect scaling.",
+        "d": "Incorrect. Double-check the calculation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. In saturation mode of a BJT, which condition is true?",
+      "answers": {
+        "a": "V<sub>BE</sub> is negative",
+        "b": "V<sub>BC</sub> is reverse-biased",
+        "c": "Both V<sub>BE</sub> and V<sub>BC</sub> are forward-biased",
+        "d": "Base current is zero"
+      },
+      "explanations": {
+        "a": "Incorrect. VBE is positive in saturation.",
+        "b": "Incorrect. Reverse bias is for forward-active mode.",
+        "c": "Correct. Saturation occurs when both junctions are forward-biased.",
+        "d": "Incorrect. Base current is nonzero in saturation."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. What is the Early effect in BJTs?",
+      "answers": {
+        "a": "Increase in β at low temperatures",
+        "b": "Reduction of base width with increasing V<sub>CE</sub>",
+        "c": "Decrease in collector current with higher V<sub>CE</sub>",
+        "d": "Complete cutoff of current at high V<sub>CE</sub>"
+      },
+      "explanations": {
+        "a": "Incorrect. The Early effect is unrelated to temperature.",
+        "b": "Correct. The Early effect refers to base-width modulation when VCE increases, increasing IC.",
+        "c": "Incorrect. Collector current actually increases with VCE in active mode.",
+        "d": "Incorrect. There is no complete cutoff in active mode."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. In a BJT, minority carrier injection from the emitter to base depends primarily on:",
+      "answers": {
+        "a": "Emitter doping and V<sub>BE</sub>",
+        "b": "Collector doping",
+        "c": "Base resistance only",
+        "d": "Temperature alone"
+      },
+      "explanations": {
+        "a": "Correct. Higher emitter doping and larger VBE enhance carrier injection.",
+        "b": "Incorrect. Collector doping plays little role in injection.",
+        "c": "Incorrect. Base resistance has negligible effect here.",
+        "d": "Incorrect. Temperature affects mobility but not as directly as VBE and doping."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. For a BJT amplifier designed for maximum gain, which parameter combination is preferred?",
+      "answers": {
+        "a": "Thick base, low emitter doping",
+        "b": "Thin base, high emitter doping, high β",
+        "c": "Thick emitter, low β",
+        "d": "Wide collector-base depletion region"
+      },
+      "explanations": {
+        "a": "Incorrect. A thick base reduces gain.",
+        "b": "Correct. A thin base, strong emitter injection, and high β maximize amplification.",
+        "c": "Incorrect. Low β reduces gain.",
+        "d": "Incorrect. Collector-base depletion width affects breakdown but not directly gain."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
     }
   ]
 }

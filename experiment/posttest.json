@@ -2,38 +2,157 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. Which statement about the structure of a BJT is correct?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The emitter is lightly doped and wide",
+        "b": "The base is heavily doped and thick",
+        "c": "The collector is moderately doped and larger in size",
+        "d": "The base and collector have identical doping levels"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. The emitter is heavily doped for strong carrier injection.",
+        "b": "Incorrect. The base is lightly doped and thin to allow carriers to pass easily.",
+        "c": "Correct. The collector is moderately doped and physically larger to handle heat dissipation and higher currents.",
+        "d": "Incorrect. Collector and base doping are intentionally different."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. In an NPN transistor, which current is typically the largest?",
+      "answers": {
+        "a": "Base current I<sub>B</sub>",
+        "b": "Collector current I<sub>C</sub>",
+        "c": "Emitter current I<sub>E</sub>",
+        "d": "I<sub>B</sub> and I<sub>C</sub> are always equal"
+      },
+      "explanations": {
+        "a": "Incorrect. The base current is typically the smallest.",
+        "b": "Incorrect. Collector current is large but slightly less than emitter current.",
+        "c": "Correct. The emitter supplies almost all carriers, making I_E slightly larger than I_C.",
+        "d": "Incorrect. IB is much smaller than IC in normal operation."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which parameter defines the efficiency of carrier injection from the emitter into the base in a BJT?",
+      "answers": {
+        "a": "Emitter injection efficiency (γ)",
+        "b": "Early voltage (V<sub>A</sub>)",
+        "c": "Base transport factor",
+        "d": "Thermal voltage"
+      },
+      "explanations": {
+        "a": "Correct. Emitter injection efficiency γ measures how effectively carriers are injected into the base.",
+        "b": "Incorrect. V_A relates to the Early effect, not injection.",
+        "c": "Incorrect. Base transport factor measures carrier recombination, not injection strength.",
+        "d": "Incorrect. Thermal voltage is related to temperature effects on current."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "4. For a PNP transistor in forward-active mode, which biasing condition is correct?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Emitter-base forward-biased, collector-base reverse-biased",
+        "b": "Both emitter-base and collector-base reverse-biased",
+        "c": "Emitter-base reverse-biased, collector-base forward-biased",
+        "d": "Both emitter-base and collector-base forward-biased"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Correct. In forward-active mode, VEB must be forward-biased and VCB reverse-biased, regardless of PNP or NPN type.",
+        "b": "Incorrect. That would correspond to cutoff mode.",
+        "c": "Incorrect. That describes reverse-active mode.",
+        "d": "Incorrect. Both junctions forward-biased indicate saturation."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. A BJT has β = 150. If I<sub>B</sub> = 40 μA, find I<sub>C</sub>.",
+      "answers": {
+        "a": "4.5 mA",
+        "b": "6.0 mA",
+        "c": "8.0 mA",
+        "d": "12.0 mA"
+      },
+      "explanations": {
+        "a": "Incorrect. Check the formula I_C = β × I_B.",
+        "b": "Correct. I_C = 150 × 40 μA = 6.0 mA.",
+        "c": "Incorrect. That assumes a wrong β value.",
+        "d": "Incorrect. That would require I_B = 80 μA."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. When a BJT operates in cutoff mode, what is the approximate collector current I<sub>C</sub>?",
+      "answers": {
+        "a": "Close to β × I<sub>B</sub>",
+        "b": "Zero or nearly zero",
+        "c": "Equal to I<sub>E</sub>",
+        "d": "Maximum possible"
+      },
+      "explanations": {
+        "a": "Incorrect. In cutoff, I_B ≈ 0, so IC ≈ 0.",
+        "b": "Correct. In cutoff mode, both junctions are reverse-biased, and IC is negligible.",
+        "c": "Incorrect. IC ≈ IE only in active and saturation modes.",
+        "d": "Incorrect. Maximum current occurs in saturation, not cutoff."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. In a BJT, how does the Early effect influence the collector current I<sub>C</sub>?",
+      "answers": {
+        "a": "IC decreases as V<sub>CE</sub> increases",
+        "b": "IC remains constant regardless of V<sub>CE</sub>",
+        "c": "IC slightly increases due to base-width modulation",
+        "d": "IC abruptly drops to zero at high V<sub>CE</sub>"
+      },
+      "explanations": {
+        "a": "Incorrect. IC does not decrease with VCE in active mode.",
+        "b": "Incorrect. IC slightly changes even in active mode due to Early effect.",
+        "c": "Correct. Higher VCE narrows the base width, increasing IC slightly.",
+        "d": "Incorrect. BJTs don’t abruptly cut off under normal operation."
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. A BJT amplifier has β = 200 and a base current I<sub>B</sub> = 50 μA. If the Early voltage V<sub>A</sub> = 80 V and V<sub>CE</sub> = 10 V, estimate I<sub>C</sub> considering the Early effect.",
+      "answers": {
+        "a": "9.5 mA",
+        "b": "10.0 mA",
+        "c": "11.0 mA",
+        "d": "12.5 mA"
+      },
+      "explanations": {
+        "a": "Incorrect. Check the Early effect formula.",
+        "b": "Incorrect. Without Early effect, IC = β × IB = 10 mA, but we must adjust for VCE.",
+        "c": "Correct. IC ≈ β × IB × (1 + VCE / VA) = 10 mA × (1 + 10/80) ≈ 11.25 mA ≈ 11.0 mA.",
+        "d": "Incorrect. That assumes a much stronger Early effect."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. In a BJT, when the base is extremely thin and lightly doped, which phenomenon becomes more significant?",
+      "answers": {
+        "a": "Emitter crowding",
+        "b": "Base-width modulation and collector current enhancement",
+        "c": "Thermal runaway",
+        "d": "Avalanche breakdown"
+      },
+      "explanations": {
+        "a": "Incorrect. Emitter crowding is unrelated to base doping.",
+        "b": "Correct. A thinner, lightly doped base enhances base-width modulation, increasing IC and Early effect sensitivity.",
+        "c": "Incorrect. Thermal runaway is temperature-related, not structural.",
+        "d": "Incorrect. Avalanche breakdown occurs under high reverse bias, not base thinning."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
     }
   ]
 }
