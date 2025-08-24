@@ -1,149 +1,145 @@
-# 3. Bipolar Junction Transistors (BJT)
 
-## 3.1 Topic Description
+# **3. Bipolar Junction Transistors (BJT)**
 
-Bipolar Junction Transistors (BJTs) are three-layer, two-junction
-semiconductor devices---either **NPN** or **PNP**---that can **amplify**
-or **switch** electrical signals.\
-They build directly on the physics of **PN junctions**, using two
-back-to-back junctions to control current flow.
+---
 
-The three regions are:
+## **3.1 Topic Description**
 
--   **Emitter (E):** Heavily doped to inject carriers efficiently.
--   **Base (B):** Very thin and lightly doped to allow carriers to pass
-    through with minimal recombination.
--   **Collector (C):** Moderately doped and larger in area to collect
-    carriers and dissipate heat.
+Bipolar Junction Transistors (**BJTs**) are **three-layer, two-junction** semiconductor devices — either **NPN** or **PNP** — that can **amplify** or **switch** electrical signals.  
+They build directly on the physics of **PN junctions**, using **two back-to-back junctions** to control current flow.
 
-**\[Insert schematic diagram of NPN and PNP BJTs here\]**
+**Regions of a BJT:**
 
-------------------------------------------------------------------------
+- **Emitter (E):** Heavily doped to inject carriers efficiently.
+- **Base (B):** Very thin and lightly doped to allow carriers to pass through with minimal recombination.
+- **Collector (C):** Moderately doped and larger in area to collect carriers and dissipate heat.
 
-## 3.2 Modes of Operation
+> *[Insert schematic diagram of NPN and PNP BJTs here]*
+
+---
+
+## **3.2 Modes of Operation**
 
 The operation of a BJT depends on the biasing of its two PN junctions:
 
--   **Cut-off:** Both junctions reverse-biased; collector current **IC ≈
-    0**.
--   **Active Mode:** Emitter--Base (E-B) forward biased, Collector--Base
-    (C-B) reverse biased; transistor acts as an **amplifier**.
--   **Saturation:** Both junctions forward-biased; **IC** limited by the
-    external circuit.
--   **Reverse Active:** E-B reverse biased, C-B forward biased; reverse
-    current gain **β′ ≪ β**.
+- **Cut-off:** Both junctions reverse-biased → \( I_C \approx 0 \)
+- **Active Mode:** Emitter-Base (**E-B**) forward biased, Collector-Base (**C-B**) reverse biased → transistor acts as an **amplifier**.
+- **Saturation:** Both junctions forward-biased → \( I_C \) limited by the external circuit.
+- **Reverse Active:** **E-B** reverse biased, **C-B** forward biased → reverse current gain \( \beta' \ll \beta \).
 
-**\[Insert energy band diagrams for each mode here\]**
+> *[Insert energy band diagrams for each mode here]*
 
-------------------------------------------------------------------------
+---
 
-## 3.3 Carrier Transport in Active Mode
+## **3.3 Carrier Transport in Active Mode**
 
-In active mode, the forward bias on the E-B junction injects majority
-carriers from the **emitter** into the **base**.\
-These carriers diffuse across the thin base and are swept into the
-**collector** by the reverse-biased C-B junction's electric field.
+In **active mode**, the forward bias on the **E-B** junction injects **majority carriers** from the **emitter** into the **base**.  
+These carriers diffuse across the **thin base** and are swept into the **collector** by the reverse-biased **C-B junction’s electric field**.
 
-Transport mechanisms:
+**Transport Mechanisms:**
 
-1.  **Injection:** High emitter doping ensures a large number of
-    carriers are injected into the base.
-2.  **Diffusion Across Base:** Carriers move through the base by
-    diffusion, due to the concentration gradient.
-3.  **Collection:** Carriers reaching the base--collector junction are
-    quickly swept into the collector.
+1. **Injection:** High emitter doping → large carrier injection into the base.
+2. **Diffusion:** Carriers move through the base via **diffusion** due to a concentration gradient.
+3. **Collection:** Carriers reaching the **base-collector** junction are quickly swept into the **collector**.
 
-**\[Insert graph of minority carrier distribution in base\]**
+> *[Insert graph of minority carrier distribution in base]*
 
-------------------------------------------------------------------------
+---
 
-## 3.4 Current Relationships
+## **3.4 Current Relationships**
 
-The key relationship between currents is:
+The total emitter current:
 
-``` math
+$$
 I_E = I_C + I_B
-```
+$$
 
-The common-base current gain **α** is defined as:
+The **common-base current gain** \( \alpha \):
 
-``` math
-α = I_C / I_E
-```
+$$
+\alpha = \frac{I_C}{I_E}
+$$
 
-with **0.98 ≤ α \< 1**.
+> For BJTs, \( 0.98 \leq \alpha < 1 \).
 
-The common-emitter current gain **β** is related to **α** by:
+The **common-emitter current gain** \( \beta \):
 
-``` math
-β = α / (1 − α)
-```
+$$
+\beta = \frac{\alpha}{1 - \alpha}
+$$
 
 Thus, in active mode:
 
-``` math
-I_C ≈ β I_B
-```
+$$
+I_C \approx \beta \, I_B
+$$
 
-------------------------------------------------------------------------
+---
 
-## 3.5 Ebers--Moll Model
+## **3.5 Ebers–Moll Model**
 
-The Ebers--Moll equations model the BJT in all regions of operation,
-analogous to **two coupled diodes**.
+The **Ebers–Moll model** describes a BJT in **all regions** of operation, using two coupled diodes.
 
-For the **collector current**:
+**Collector Current Equation:**
 
-``` math
-I_C = I_S (e^{V_{BE}/V_T} - 1) - α_R I_S (e^{V_{BC}/V_T} - 1)
-```
+$$
+I_C = I_S \left( e^{V_{BE}/V_T} - 1 \right) - \alpha_R I_S \left( e^{V_{BC}/V_T} - 1 \right)
+$$
 
-For the **emitter current**:
+**Emitter Current Equation:**
 
-``` math
-I_E = α_F I_S (e^{V_{BE}/V_T} - 1) - I_S (e^{V_{BC}/V_T} - 1)
-```
+$$
+I_E = \alpha_F I_S \left( e^{V_{BE}/V_T} - 1 \right) - I_S \left( e^{V_{BC}/V_T} - 1 \right)
+$$
 
-Where: - **I_S**: saturation current of the transistor - **V_T**:
-thermal voltage (≈ 25.85 mV at room temperature) - **α_F**: forward
-common-base gain - **α_R**: reverse common-base gain
+Where:
 
-**\[Insert schematic diagram of Ebers--Moll equivalent circuit here\]**
+- \( I_S \) → Saturation current of the transistor  
+- \( V_T \) → Thermal voltage (~25.85 mV at room temperature)  
+- \( \alpha_F \) → Forward common-base gain  
+- \( \alpha_R \) → Reverse common-base gain
 
-------------------------------------------------------------------------
+> *[Insert schematic diagram of Ebers–Moll equivalent circuit here]*
 
-## 3.6 Output Characteristics
+---
 
-In the **common-emitter** configuration, the **IC--VCE** characteristics
-in active mode are nearly flat, indicating that **IC** is primarily
-controlled by **IB** rather than **VCE**, except for a small slope due
-to the **Early effect**.
+## **3.6 Output Characteristics**
 
-**\[Insert IC--VCE family of curves here\]**
+In the **common-emitter configuration**, the **\( I_C \)–\( V_{CE} \)** characteristics in active mode are **nearly flat**, showing that:
 
-------------------------------------------------------------------------
+- \( I_C \) is primarily controlled by **\( I_B \)**.
+- A slight slope appears due to the **Early effect**.
 
-## 3.7 Summary of Key Equations
+> *[Insert \( I_C \)-\( V_{CE} \) family of curves here]*
 
-``` math
-I_C = β I_B
-```
+---
 
-``` math
-I_E = (β + 1) I_B
-```
+## **3.7 Summary of Key Equations**
 
-``` math
-I_C = I_S (e^{V_{BE}/V_T} - 1)  \  \text{(Active mode)}
-```
+**Collector current:**
 
-These relationships are essential for designing and analyzing amplifier
-and switching circuits using BJTs.
+$$
+I_C = \beta I_B
+$$
 
-------------------------------------------------------------------------
+**Emitter current:**
 
-## 3.8 Suggested References
+$$
+I_E = (\beta + 1) I_B
+$$
 
-1.  R. F. Pierret, *Advanced Semiconductor Fundamentals*.
-2.  S. M. Sze and K. Ng, *Physics of Semiconductor Devices*.
-3.  B. G. Streetman and S. Banerjee, *Solid State Electronic Devices*.
+**Active-mode equation:**
+
+$$
+I_C = I_S \left( e^{V_{BE}/V_T} - 1 \right)
+$$
+
+These equations are essential for designing **amplifiers** and **switching circuits** using BJTs.
+
+---
+
+## **3.8 Suggested References**
+
+1. R. F. Pierret — *Advanced Semiconductor Fundamentals*  
+2. S. M. Sze & K. Ng — *Physics of Semiconductor Devices*  
+3. B. G. Streetman & S. Banerjee — *Solid State Electronic Devices*
