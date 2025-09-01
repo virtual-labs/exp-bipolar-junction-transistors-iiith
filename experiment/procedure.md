@@ -1,8 +1,7 @@
-## Procedure
 
-⭐ When you enter the simulation section, a guided tour will appear. It is strongly recommended that you take the tour, as it provides step-by-step instructions to help you understand the experiment thoroughly. The tour also introduces you to the various controls, features, and interface elements, making it easier for you to navigate and explore the experiment effectively.
+⭐ When you enter the simulation section, a guided tour will appear. It is strongly recommended that you take the tour for the first time, as it provides step-by-step instructions to help you understand the experiment thoroughly. The tour also introduces you to the various controls, features, and interface elements, making it easier for you to navigate and explore the experiment effectively.
 
-### Task-1: BJT Device Structure and Operating Region Identification
+## Task-1: BJT Device Structure and Operating Region Identification
 
 In the first task, the user is presented with the BJT device structure visualization showing the three regions: emitter, base, and collector. The simulation displays:
 - Device cross-section with clearly marked N-P-N or P-N-P junction structure
@@ -12,7 +11,7 @@ In the first task, the user is presented with the BJT device structure visualiza
 
 The user must identify and label each visualization with their respective operating regions and explain the carrier transport mechanisms in each mode.
 
-### Task-2: Interactive I-V Characteristics and Parameter Effects
+## Task-2: Interactive I-V Characteristics and Parameter Effects
 
 In the second task, there are interactive plots showing BJT characteristics where users can observe how different parameters affect transistor behavior:
 - **Base Current Control**: Adjust IB from 0 to 100μA to see collector current variations
