@@ -1,10 +1,4 @@
 
-# **3. Bipolar Junction Transistors (BJT)**
-
----
-
-## **3.1 Topic Description**
-
 Bipolar Junction Transistors (**BJTs**) are **three-layer, two-junction** semiconductor devices — either **NPN** or **PNP** — that can **amplify** or **switch** electrical signals.  
 They build directly on the physics of **PN junctions**, using **two back-to-back junctions** to control current flow.
 
@@ -14,7 +8,8 @@ They build directly on the physics of **PN junctions**, using **two back-to-back
 - **Base (B):** Very thin and lightly doped to allow carriers to pass through with minimal recombination.
 - **Collector (C):** Moderately doped and larger in area to collect carriers and dissipate heat.
 
-> *[Insert schematic diagram of NPN and PNP BJTs here]*
+<p><img src="images/bjt.png" ></p> 
+
 
 ---
 
@@ -26,8 +21,6 @@ The operation of a BJT depends on the biasing of its two PN junctions:
 - **Active Mode:** Emitter-Base (**E-B**) forward biased, Collector-Base (**C-B**) reverse biased → transistor acts as an **amplifier**.
 - **Saturation:** Both junctions forward-biased → \( I_C \) limited by the external circuit.
 - **Reverse Active:** **E-B** reverse biased, **C-B** forward biased → reverse current gain \( \beta' \ll \beta \).
-
-> *[Insert energy band diagrams for each mode here]*
 
 ---
 
@@ -42,7 +35,7 @@ These carriers diffuse across the **thin base** and are swept into the **collect
 2. **Diffusion:** Carriers move through the base via **diffusion** due to a concentration gradient.
 3. **Collection:** Carriers reaching the **base-collector** junction are quickly swept into the **collector**.
 
-> *[Insert graph of minority carrier distribution in base]*
+><p><img src="images/minority.png" ></p> 
 
 ---
 
@@ -99,7 +92,7 @@ Where:
 - \( \alpha_F \) → Forward common-base gain  
 - \( \alpha_R \) → Reverse common-base gain
 
-> *[Insert schematic diagram of Ebers–Moll equivalent circuit here]*
+<p><img src="images/Ebers.png" ></p> 
 
 ---
 
@@ -110,7 +103,7 @@ In the **common-emitter configuration**, the **\( I_C \)–\( V_{CE} \)** charac
 - \( I_C \) is primarily controlled by **\( I_B \)**.
 - A slight slope appears due to the **Early effect**.
 
-> *[Insert \( I_C \)-\( V_{CE} \) family of curves here]*
+<p><img src="images/ic.png" ></p> 
 
 ---
 
@@ -138,8 +131,3 @@ These equations are essential for designing **amplifiers** and **switching circu
 
 ---
 
-## **3.8 Suggested References**
-
-1. R. F. Pierret — *Advanced Semiconductor Fundamentals*  
-2. S. M. Sze & K. Ng — *Physics of Semiconductor Devices*  
-3. B. G. Streetman & S. Banerjee — *Solid State Electronic Devices*
