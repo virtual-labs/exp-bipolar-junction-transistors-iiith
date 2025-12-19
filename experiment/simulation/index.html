@@ -4165,9 +4165,19 @@
                 questionBlanks.forEach(blank => {
                     totalBlanks++;
                     const input = document.getElementById(blank.id);
-                    const userAnswer = input.value.toLowerCase().trim();
+                    let userAnswer = input.value.toLowerCase().trim();
+                    let correctAnswer = blank.correctAnswer.toLowerCase();
                     
-                    if (userAnswer === blank.correctAnswer.toLowerCase()) {
+                    // Special handling for beta symbol - accept both "β" and "beta"
+                    if (correctAnswer === "β") {
+                        correctAnswer = "beta"; // Normalize correct answer
+                    }
+                    if (userAnswer === "β") {
+                        userAnswer = "beta"; // Normalize user answer
+                    }
+                    
+                    // Check if answer is correct (case-insensitive)
+                    if (userAnswer === correctAnswer) {
                         correctBlanks++;
                         input.classList.remove('incorrect');
                         input.classList.add('correct');
@@ -4218,17 +4228,29 @@
                 questionBlanks.forEach(blank => {
                     totalBlanks++;
                     const input = document.getElementById(blank.id);
-                    const userAnswer = input.value.toLowerCase().trim();
+                    let userAnswer = input.value.toLowerCase().trim();
                     
                     let isCorrect = false;
                     
+                    // Handle numerical answers with tolerance
                     if (!isNaN(parseFloat(userAnswer)) && !isNaN(parseFloat(blank.correctAnswer))) {
                         const userNum = parseFloat(userAnswer);
                         const correctNum = parseFloat(blank.correctAnswer);
                         const tolerance = blank.tolerance || 0;
                         isCorrect = Math.abs(userNum - correctNum) <= tolerance;
                     } else {
-                        isCorrect = userAnswer === blank.correctAnswer.toLowerCase();
+                        // Handle text answers (case-insensitive)
+                        let correctAnswer = blank.correctAnswer.toLowerCase();
+                        
+                        // Special handling for beta symbol - accept both "β" and "beta"
+                        if (correctAnswer === "β") {
+                            correctAnswer = "beta";
+                        }
+                        if (userAnswer === "β") {
+                            userAnswer = "beta";
+                        }
+                        
+                        isCorrect = userAnswer === correctAnswer;
                     }
                     
                     if (isCorrect) {
