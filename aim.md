@@ -1,0 +1,1 @@
+To study the characteristics of a Bipolar Junction Transistor (BJT) in common-emitter and/or common-base configurations and to analyze its behavior in different operating regions (cut-off, active, and saturation) by plotting the input and output characteristics.
